@@ -1,0 +1,36 @@
+{
+  "name": "Demo",
+  "description": "Random",
+  "version": "2.0",
+  "permissions": [
+    "management"
+  ],
+  "background": {
+    "scripts": [
+      "jquery-2.0.0.min.js",
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "browser_action": {
+    "default_title": "Extensions Manager",
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*"
+      ],
+      "js": [
+        "jquery-2.0.0.min.js"
+      ]
+    }
+  ],
+  "manifest_version": 2
+}
